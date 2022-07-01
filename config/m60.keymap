@@ -16,6 +16,7 @@
 #define RGB  2
 
 #define _(KEY) &kp KEY
+#define __(RGB) &rgb_ug RGB
 #define MO(LAYER) &mo LAYER
 
 / {
@@ -72,9 +73,9 @@ ____       ____       ____       ____                                           
    rgb_layer {
 			bindings = <
 none none none none none none none none none none none none none none
-&rgb_ug RGB_EFF &rgb_ug RGB_EFR none none none none none none none none none none none none
-&rgb_ug RGB_TOG &rgb_ug RGB_HUD &rgb_ug RGB_HUI &rgb_ug RGB_SAD &rgb_ug RGB_SAI none none none none none none none none
-none none none none none &bootloader none none &rgb_ug RGB_BRD &rgb_ug RGB_BRI &rgb_ug RGB_SPD &rgb_ug RGB_SPI
+__(RGB_EFF) __(RGB_EFR) none none none none none none none none none none none none
+__(RGB_TOG) __(RGB_HUD) __(RGB_HUI) __(RGB_SAD) __(RGB_SAI) none none none none none none none none
+none none none none none &bootloader none none __(RGB_BRD) __(RGB_BRI) __(RGB_SPD) __(RGB_SPI)
 none none none             none              none none none none
 			>;
 		};
