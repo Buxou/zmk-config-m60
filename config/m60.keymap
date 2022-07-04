@@ -36,6 +36,15 @@
       bindings = <&kp V>, <&kp K_PASTE>;
       mods = <(MOD_LGUI|MOD_RGUI)>;
     };
+
+    lmt: layer_mod_tap {
+      compatible = "zmk,behavior-hold-tap";
+      label = "LAYER_MOD_TAP";
+      #binding-cells = <2>;
+      flavor = "hold-preferred";
+      tapping-term-ms = <200>;
+      bindings = <&mo>, <&kp>;
+    };
   };
 
   keymap0: keymap {
@@ -55,7 +64,7 @@
         _(TAB)  _(Q)   _(W)   _(E)   _(R)   _(T)   _(Y)   _(U)   _(I)   _(O)   _(P)  _(LBKT)  _(RBKT)  _(BSLH)
         MO(NAV) _(A)   _(S)   _(D)   _(F)   _(G)   _(H)   _(J)   _(K)   _(L)  _(SEMI) _(SQT)       _(RET)
         _(LSHFT)  _(Z)   _(X)   &mcopy   &mpaste   _(B)   _(N)   _(M)  _(COMMA) _(DOT)  _(FSLH)       __(RSHFT,UP)
-        _(LCTRL) _(LGUI) _(LALT)               _(SPACE)           _(RALT)  __(K_CMENU,LEFT)  __(MO(TOOL),DOWN)   __(RCTRL,RIGHT)
+        _(LCTRL) _(LGUI) _(LALT)               _(SPACE)           _(RALT)  __(K_CMENU,LEFT)  &lmt TOOL DOWN   __(RCTRL,RIGHT)
       >;
     };
 
