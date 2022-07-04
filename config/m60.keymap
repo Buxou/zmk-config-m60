@@ -6,7 +6,6 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/rgb.h>
 
 #define none &none
 #define ____ &trans
@@ -16,7 +15,6 @@
 #define RGB  2
 
 #define _(KEY) &kp KEY
-#define __(RGB) &rgb_ug RGB
 #define MO(LAYER) &mo LAYER
 
 / {
@@ -73,9 +71,9 @@ ____       ____       ____       ____                                           
    rgb_layer {
 			bindings = <
 none none none none none none none none none none none none none none
-__(RGB_EFF) __(RGB_EFR) none none none none none none none none none none none none
-__(RGB_TOG) __(RGB_HUD) __(RGB_HUI) __(RGB_SAD) __(RGB_SAI) none none none none none none none none
-none none none none none &bootloader none none __(RGB_BRD) __(RGB_BRI) __(RGB_SPD) __(RGB_SPI)
+none none none none none none none none none none none none none none
+none none none none none none none none none none none none none
+none none none none none &bootloader none none none none none none
 none none none             none              none none none none
 			>;
 		};
