@@ -25,7 +25,7 @@
       compatible = "zmk,behavior-mod-morph";
       label = "MOD_COPY";
       #binding-cells = <0>;
-      bindings = <&kp C>, <&kp K_COPY>;
+      bindings = <&kp C>, <&kp C_AC_COPY>;
       mods = <(MOD_LGUI|MOD_RGUI)>;
     };
 
@@ -64,14 +64,14 @@
         _(TAB)  _(Q)   _(W)   _(E)   _(R)   _(T)   _(Y)   _(U)   _(I)   _(O)   _(P)  _(LBKT)  _(RBKT)  _(BSLH)
         MO(NAV) _(A)   _(S)   _(D)   _(F)   _(G)   _(H)   _(J)   _(K)   _(L)  _(SEMI) _(SQT)       _(RET)
         _(LSHFT)  _(Z)   _(X)   &mcopy   &mpaste   _(B)   _(N)   _(M)  _(COMMA) _(DOT)  _(FSLH)       __(RSHFT,UP)
-        _(LCTRL) _(LGUI) _(LALT)               _(SPACE)           _(RALT)  __(K_CMENU,LEFT)  &lmt TOOL DOWN   __(RCTRL,RIGHT)
+        _(LCTRL) _(LGUI) _(LALT)               _(SPACE)           _(RALT)  __(K_MENU,LEFT)  &lmt TOOL DOWN   __(RCTRL,RIGHT)
       >;
     };
 
     // # layer 1 - navigation
     // ╭──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┬─────┬──────┬─────┬─────┬─────┬─────────╮
     // |   `  |  F1  |  F2  |  F3  |  F4  |  F5  |  F6  |  F7  |  F8 |  F9  | F10 | F11 | F12 |   DEL   |
-    // | TAB  | PREV | PLAY | NEXT |      |      |      | PGUP |  ↑  | PGDN |PRINT|     |     |  reset  |
+    // | TAB  | PREV | PLAY | NEXT |      |      |      | PGUP |  ↑  | PGDN |PRINT|     |     |         |
     // |      | VOLD | MUTE | VOLU |      |      | HOME |  ←  |  ↓  |  →  |     |     |     ENTER     |
     // |  SHIFT   |     |     | COPY|PASTE|      | END |     |     |     |     |       SHIFT            |
     // |  CTL  |  WIN  |  ALT  |            SPACE               | ALT | MENU |  TOOL |   CTRL           |
@@ -80,9 +80,9 @@
     nav_layer {
       bindings = <
 _(GRAVE)  _(F1)  _(F2)  _(F3)  _(F4)  _(F5)  _(F6)  _(F7)  _(F8)  _(F9)  _(F10)  _(F11)  _(F12) _(DELETE)
-____     _(C_PREV) _(C_PLAY_PAUSE) _(C_NEXT)  none  none  none  _(PAGE_UP)  _(UP)  _(PAGE_DOWN)  _(PSCRN)  none  none  &reset
+____     _(C_PREV) _(C_PLAY_PAUSE) _(C_NEXT)  none  none  none  _(PAGE_UP)  _(UP)  _(PAGE_DOWN)  _(PSCRN)  ____  ____  ____
 ____     _(C_VOLUME_DOWN)  _(C_MUTE) _(C_VOLUME_UP) none none  _(HOME) _(LEFT) _(DOWN)   _(RIGHT)  none   none  ____
-____     none      none      _(K_COPY)      _(K_PASTE)      none      _(END)      none      none      none      none      ____
+____     none      none      _(K_COPY)      _(K_PASTE)      none      _(END)      none      ____      ____      ____      ____
 ____       ____       ____       ____                                              ____     ____     ____     ____
       >;
     };
@@ -90,7 +90,7 @@ ____       ____       ____       ____                                           
     // # layer 2 - Tools and bootloader
     alt_layer {
       bindings = <
-none none none none none none none none none none none _(C_BRI_DEC) _(C_BRI_INC) none
+none none none none none none none none none none _(C_ASPECT) _(C_BRI_DEC) _(C_BRI_INC) &reset
 none none none none none none none none none none none none none none
 none none none none none none none none none none none none none
 none none none none none &bootloader none none none none none none
