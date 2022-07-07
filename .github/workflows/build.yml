@@ -2,8 +2,6 @@ on:
   push:
     paths:
       - 'config/**'
-    tags:
-      - '*'
 
 jobs:
   build:
