@@ -15,10 +15,14 @@ jobs:
     needs: build
     if: startsWith(github.ref, 'refs/tags/')
     steps:
+      - uses: actions/download-artifact@master
+        with:
+          name: firmware
+          path: build/artifacts
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           prerelease: false
           automatic_release_tag: "latest"
           files: |
-            firmware.zip
+            build/artifacts/firmware.zip
