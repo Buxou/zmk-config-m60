@@ -4,12 +4,11 @@ on:
       - '*'
 
 jobs:
-  build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
-
   release:
     name: "Release"
+    runs-on: "ubuntu-latest"
     steps:
+      - uses: "zmkfirmware/zmk/.github/workflows/build-user-config.yml@main"
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
