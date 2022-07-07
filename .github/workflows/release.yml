@@ -8,9 +8,11 @@ jobs:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
 
   release:
-    uses: marvinpinto/action-automatic-releases@latest
-    with:
-      repo_token: "${{ secrets.GITHUB_TOKEN }}"
-      prerelease: false
-      files: |
-        firmware.zip
+    name: "Release"
+    steps:
+      - uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          prerelease: false
+          files: |
+            firmware.zip
