@@ -25,4 +25,4 @@ jobs:
           prerelease: false
           automatic_release_tag: "latest"
           files: |
-            build/artifacts/firmware.zip
+            build/artifacts/*.uf2
