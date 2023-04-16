@@ -30,4 +30,4 @@ jobs:
           title: "Development Build"
           automatic_release_tag: "latest"
           files: |
-            build/artifacts/*.uf2
+            build/artifacts/*.zip
