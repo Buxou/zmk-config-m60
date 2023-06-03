@@ -15,9 +15,17 @@
 #define NAV  1
 #define TOOL 2
 
+// Default key macro
 #define _(KEY) &kp KEY
+// Key tab macro
 #define __(KEY, TAP) &mt KEY TAP
-#define |(KEY) &mmv KEY
+// Mouse macro
+#define M(KEY) &mmv KEY
+// Mouse click macro
+#define MC(KEY) &mkp KEY
+// Mouse Scroll macro
+#define MS(KEY) &mwh KEY
+// Layer macro
 #define MO(LAYER) &mo LAYER
 
 / {
@@ -94,9 +102,9 @@ ____       ____       ____       ____                                           
       bindings = <
 //none none none none none none &rgb_ug RGB_TOG &rgb_ug RGB_EFF &rgb_ug RGB_BRD &rgb_ug RGB_BRI _(C_ASPECT) _(C_BRI_DEC) _(C_BRI_INC) &sys_reset
 none none none none none none none none none none _(C_ASPECT) _(C_BRI_DEC) _(C_BRI_INC) &sys_reset
-none &mkp LCLK |(MOVE_UP) &mkp RCLK none none none &mkp LCLK |(MOVE_UP) &mkp RCLK none none none none
-none |(MOVE_LEFT) |(MOVE_DOWN) |(MOVE_RIGHT) none none &mwh SCROLL_UP |(MOVE_LEFT) |(MOVE_DOWN) |(MOVE_RIGHT) none none none
-none none none none none &bootloader &mwh SCROLL_DOWN none none none none none
+none MC(LCLK) |(MOVE_UP) MC(RCLK) none none none MC(LCLK) |(MOVE_UP) MC(RCLK) none none none none
+none |(MOVE_LEFT) |(MOVE_DOWN) |(MOVE_RIGHT) none none MS(SCROLL_UP) |(MOVE_LEFT) |(MOVE_DOWN) |(MOVE_RIGHT) none none none
+none none none none none &bootloader MS(SCROLL_DOWN) none none none none none
 none none none             none              none none none none
       >;
     };
