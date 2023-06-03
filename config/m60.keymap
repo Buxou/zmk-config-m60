@@ -102,8 +102,8 @@ ____       ____       ____       ____                                           
       bindings = <
 //none none none none none none &rgb_ug RGB_TOG &rgb_ug RGB_EFF &rgb_ug RGB_BRD &rgb_ug RGB_BRI _(C_ASPECT) _(C_BRI_DEC) _(C_BRI_INC) &sys_reset
 none none none none none none none none none none _(C_ASPECT) _(C_BRI_DEC) _(C_BRI_INC) &sys_reset
-none MC(LCLK) |(MOVE_UP) MC(RCLK) none none none MC(LCLK) |(MOVE_UP) MC(RCLK) none none none none
-none |(MOVE_LEFT) |(MOVE_DOWN) |(MOVE_RIGHT) none none MS(SCROLL_UP) |(MOVE_LEFT) |(MOVE_DOWN) |(MOVE_RIGHT) none none none
+none MC(LCLK) M(MOVE_UP) MC(RCLK) none none none MC(LCLK) M(MOVE_UP) MC(RCLK) none none none none
+none M(MOVE_LEFT) M(MOVE_DOWN) M(MOVE_RIGHT) none none MS(SCROLL_UP) M(MOVE_LEFT) M(MOVE_DOWN) M(MOVE_RIGHT) none none none
 none none none none none &bootloader MS(SCROLL_DOWN) none none none none none
 none none none             none              none none none none
       >;
