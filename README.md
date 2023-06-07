@@ -7,8 +7,8 @@ Board: [makerdiary m60](https://github.com/makerdiary/m60)
 ## Installation
 
  - Download the [latest version](https://github.com/BarbUk/zmk-config/releases/latest) from the release page.
- - Enter [bootloader mode](https://wiki.makerdiary.com/m60/upgrade_firmware/#how-to-enter-the-bootloader), a new usb device named *M60Keyboard* will be available.
- - Copy the uf2 firmware in the M60Keyboard mount point.
+ - Enter [bootloader mode](https://wiki.makerdiary.com/m60/upgrade_firmware/#how-to-enter-the-bootloader), a new usb device named **M60Keyboard** will be available.
+ - Copy the uf2 firmware in the **M60Keyboard** mount point.
 
 ## Layout
 
