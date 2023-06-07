@@ -81,9 +81,9 @@
     // # layer 1 - navigation
     // ╭──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┬─────┬──────┬─────┬─────┬─────┬─────────╮
     // |   `  |  F1  |  F2  |  F3  |  F4  |  F5  |  F6  |  F7  |  F8 |  F9  | F10 | F11 | F12 |   DEL   |
-    // | TAB  | PREV | PLAY | NEXT |      |      |      | PGUP |  ↑  | PGDN |PRINT|     |     |         |
+    // | TOOL | PREV | PLAY | NEXT |      |      |      | PGUP |  ↑  | PGDN |PRINT|     |     |         |
     // |      | VOLD | MUTE | VOLU |      |      | HOME |  ←  |  ↓  |  →  |     |     |     ENTER     |
-    // |  SHIFT   |     |     | COPY|PASTE|      | END |     |     |     |     |       SHIFT            |
+    // |  SHIFT   |     |     | COPY | PASTE |    | END |      |     |      |     |       SHIFT         |
     // |  CTL  |  WIN  |  ALT  |            SPACE               | ALT | MENU |  TOOL |   CTRL           |
     // ╰───────┴───────┴───────┴────────────────────────────────┴─────┴──────┴───────┴──────────────────╯
 
@@ -98,9 +98,16 @@ ____       ____       ____       ____                                           
     };
 
     // # layer 2 - Tools and bootloader
+    // ╭──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┬─────┬──────┬─────┬─────┬─────┬─────────╮
+    // |      |      |      |      |      |      |      |      |     |      |  🖵 | 🔅 |  🔆 |  RESET  |
+    // |      |   ‹  | 🖱️↑ |   ›   |      |      |      | ‹ |  🖱️↑  | ›    |     |     |     |         |
+    // |      | 🖱️← | 🖱️↓ | 🖱️→ |      |      | ↟ |  🖱️←  |  🖱️↓  |  🖱️→  |     |     |         |
+    // |         |     |     |      |      |  🥾  | ↡ |     |     |     |     |                        |
+    // |       |       |       |                                |     |      |       |                  |
+    // ╰───────┴───────┴───────┴────────────────────────────────┴─────┴──────┴───────┴──────────────────╯
+
     alt_layer {
       bindings = <
-//none none none none none none &rgb_ug RGB_TOG &rgb_ug RGB_EFF &rgb_ug RGB_BRD &rgb_ug RGB_BRI _(C_ASPECT) _(C_BRI_DEC) _(C_BRI_INC) &sys_reset
 none none none none none none none none none none _(C_ASPECT) _(C_BRI_DEC) _(C_BRI_INC) &sys_reset
 none MC(LCLK) MV(MOVE_UP) MC(RCLK) none none none MC(LCLK) MV(MOVE_UP) MC(RCLK) none none none none
 none MV(MOVE_LEFT) MV(MOVE_DOWN) MV(MOVE_RIGHT) none none MS(SCROLL_UP) MV(MOVE_LEFT) MV(MOVE_DOWN) MV(MOVE_RIGHT) none none none
