@@ -4,6 +4,8 @@ Firmware: https://github.com/zmkfirmware/zmk/
 
 Board: https://github.com/makerdiary/m60
 
+Layout: Import [m60_layout_60_ansi.json](m60_layout_60_ansi.json) on https://keyboard.makerdiary.com/
+
 ## Layers
 
 ### Default
