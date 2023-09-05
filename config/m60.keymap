@@ -71,7 +71,7 @@
     // |────────┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴────────────|
     // |    ⇧     |  Z  |  X  |  C  |  V  |  B  |  N  |  M  |  ,  |  .  |  /  |       ⇧        |
     // |──────┬───┴──┬──┴──┬──┴─────┴─────┴─────┴─────┴─────┴───┬─┴─────┼─────┴┬──────┬────────|
-    // | Ctrl | Win  | alt |                                    | SYSRQ | Menu | TOOL |  Ctrl  |
+    // | Ctrl | Win  | Alt |                                    |  Alt  | Menu | TOOL |  Ctrl  |
     // ╰──────┴──────┴─────┴────────────────────────────────────┴───────┴──────┴──────┴────────╯
 
     default_layer {
@@ -80,7 +80,7 @@
         _(TAB)  _(Q)   _(W)   _(E)   _(R)   _(T)   _(Y)   _(U)   _(I)   _(O)   _(P)  _(LBKT)  _(RBKT)  _(BSLH)
         MO(NAV) _(A)   _(S)   _(D)   _(F)   _(G)   _(H)   _(J)   _(K)   _(L)  _(SEMI) _(SQT)       _(RET)
         _(LSHFT)  _(Z)   _(X)   &mcopy   &mpaste   _(B)   _(N)   _(M)  _(COMMA) _(DOT)  _(FSLH)       __(RSHFT,UP)
-        _(LCTRL) _(LGUI) _(LALT)               _(SPACE)           MO(SYSRQ)  __(K_MENU,LEFT)  &lmt TOOL DOWN   __(RCTRL,RIGHT)
+        _(LCTRL) _(LGUI) _(LALT)               _(SPACE)           _(RALT)  __(K_MENU,LEFT)  &lmt TOOL DOWN   __(RCTRL,RIGHT)
       >;
     };
 
