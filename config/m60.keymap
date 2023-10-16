@@ -18,7 +18,7 @@
 
 // Default key macro
 #define _(KEY) &kp KEY
-// Key tab macro
+// Key tap macro
 #define __(KEY, TAP) &mt KEY TAP
 // Mouse Mouvement macro
 #define MV(KEY) &mmv KEY
