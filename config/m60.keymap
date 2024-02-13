@@ -25,7 +25,7 @@
 // Mouse Click macro
 #define MC(KEY) &mkp KEY
 // Mouse Scroll macro
-#define MS(KEY) &mwh KEY
+#define MS(KEY) &msc KEY
 // Layer macro
 #define MO(LAYER) &mo LAYER
 
