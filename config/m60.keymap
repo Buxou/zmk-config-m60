@@ -6,7 +6,7 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/mouse.h>
+#include "mouse.dtsi"
 
 #define none &none
 #define ____ &trans
@@ -20,12 +20,6 @@
 #define _(KEY) &kp KEY
 // Key tap macro
 #define __(KEY, TAP) &mt KEY TAP
-// Mouse Mouvement macro
-#define MV(KEY) &mmv KEY
-// Mouse Click macro
-#define MC(KEY) &mkp KEY
-// Mouse Scroll macro
-#define MS(KEY) &msc KEY
 // Layer macro
 #define MO(LAYER) &mo LAYER
 
@@ -123,9 +117,9 @@ ____       ____       ____       ____                                           
     alt_layer {
       bindings = <
 none none none none none none none none none none _(C_ASPECT) _(C_BRI_DEC) _(C_BRI_INC) &sys_reset
-none MC(LCLK) MV(MOVE_UP) MC(RCLK) none none none MC(LCLK) MV(MOVE_UP) MC(RCLK) none none none none
-none none none none none none MS(SCROLL_UP) MV(MOVE_LEFT) MV(MOVE_DOWN) MV(MOVE_RIGHT) none none none
-none none none none none &bootloader MS(SCROLL_DOWN) none none none none none
+none U_BTN1 U_MS_U U_BTN2 none none none U_BTN1 U_MS_U U_BTN2 none none none none
+none U_MS_L U_MS_D U_MS_R none none U_WH_U U_MS_L U_MS_D U_MS_R none none none
+none none none none none &bootloader U_WH_D none none none none none
 none none none             none              none none none none
       >;
     };
