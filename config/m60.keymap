@@ -6,7 +6,6 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include "mouse.dtsi"
 
 #define none &none
 #define ____ &trans
@@ -117,9 +116,9 @@ ____       ____       ____       ____                                           
     alt_layer {
       bindings = <
 none none none none none none none none none none _(C_ASPECT) _(C_BRI_DEC) _(C_BRI_INC) &sys_reset
-none U_BTN1 U_MS_U U_BTN2 none none none U_BTN1 U_MS_U U_BTN2 none none none none
-none U_MS_L U_MS_D U_MS_R none none U_WH_U U_MS_L U_MS_D U_MS_R none none none
-none none none none none &bootloader U_WH_D none none none none none
+none none none none none none none none none none none none none none
+none none none none none none none none none none none none none
+none none none none none &bootloader none none none none none none
 none none none             none              none none none none
       >;
     };
