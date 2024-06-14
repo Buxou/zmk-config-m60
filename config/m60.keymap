@@ -6,6 +6,7 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/mouse.h>
 
 #define none &none
 #define ____ &trans
@@ -21,6 +22,10 @@
 #define __(KEY, TAP) &mt KEY TAP
 // Layer macro
 #define MO(LAYER) &mo LAYER
+// Define Mouse button
+#define LCLK &mkp LCLK
+#define RCLK &mkp RCLK
+#define MCLK &mkp MCLK
 
 / {
 
@@ -116,7 +121,7 @@ ____       ____       ____       ____                                           
     alt_layer {
       bindings = <
 none none none none none none none none none none _(C_ASPECT) _(C_BRI_DEC) _(C_BRI_INC) &sys_reset
-none none none none none none none none none none none none none none
+none none none none none none none LCLK MCLK RCLK none none none none
 none none none none none none none none none none none none none
 none none none none none &bootloader none none none none none none
 none none none             none              none none none none
