@@ -23,9 +23,9 @@
 // Layer macro
 #define MO(LAYER) &mo LAYER
 // Define Mouse button
-#define LCLK &mkp LCLK
-#define RCLK &mkp RCLK
-#define MCLK &mkp MCLK
+#define M_LCLK &mkp LCLK
+#define M_RCLK &mkp RCLK
+#define M_MCLK &mkp MCLK
 
 / {
 
@@ -121,7 +121,7 @@ ____       ____       ____       ____                                           
     alt_layer {
       bindings = <
 none none none none none none none none none none _(C_ASPECT) _(C_BRI_DEC) _(C_BRI_INC) &sys_reset
-none none none none none none none LCLK MCLK RCLK none none none none
+none none none none none none none M_LCLK M_MCLK M_RCLK none none none none
 none none none none none none none none none none none none none
 none none none none none &bootloader none none none none none none
 none none none             none              none none none none
