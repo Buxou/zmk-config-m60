@@ -14,4 +14,4 @@
 ---
 include:
   - board: adafruit_kb2040
-    shield: m60
+    shield: m6
